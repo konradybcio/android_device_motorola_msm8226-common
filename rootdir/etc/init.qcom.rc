@@ -25,8 +25,8 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-import init.qcom.usb.rc
-import init.target.rc
+# import init.qcom.usb.rc
+# import init.target.rc
 
 on early-init
     # Create firmware mount point
@@ -427,6 +427,7 @@ service adsprpcd /system/bin/adsprpcd
     class main
     user media
     group media
+    disabled
 
 service atvc_core /system/bin/dbvc_atvc_property_set
     class core
@@ -493,6 +494,7 @@ service ril-daemon /system/bin/rild
     socket cutback stream 660 media radio
     user root
     group radio cache inet misc audio sdcard_rw qcom_oncrpc qcom_diag log net_raw
+    disabled
 
 service ril-daemon1 /system/bin/rild -c 2
     class main
@@ -507,6 +509,7 @@ service rild1-wrapper /system/bin/sh /system/etc/init.qcom.ril.sh
     user root
     group root
     oneshot
+    disabled
 
 service mmi-touch-sh /system/bin/sh /init.mmi.touch.sh synaptics aps
     class late_start
@@ -530,11 +533,12 @@ service netmgrd /system/bin/netmgrd
     class main
     user root
     group root wifi wakelock radio
+    disabled
 
-service qcamerasvr /system/bin/mm-qcamera-daemon
-    class late_start
-    user camera
-    group camera system inet input graphics
+#service qcamerasvr /system/bin/mm-qcamera-daemon
+#    class late_start
+#    user camera
+#    group camera system inet input graphics
 
 service qmuxd /system/bin/qmuxd
     class main
@@ -574,6 +578,7 @@ service wcnss-service /system/bin/wcnss_service
     user root
     group system wifi
     oneshot
+    disabled
 
 # WPA
 service p2p_supplicant /system/bin/wpa_supplicant \
