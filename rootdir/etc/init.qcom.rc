@@ -25,7 +25,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-import init.qcom.usb.rc
+# import init.qcom.usb.rc
 import init.target.rc
 
 on early-init
@@ -219,7 +219,8 @@ on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
     # Allow subsystem (modem etc) debugging
-    write /sys/module/subsystem_restart/parameters/enable_debug ${persist.sys.ssr.enable_debug}
+    # not supported in UT
+    # write /sys/module/subsystem_restart/parameters/enable_debug ${persist.sys.ssr.enable_debug}
 
 on boot
     # mount debugfs for systrace
@@ -596,16 +597,16 @@ service thermal-engine /system/bin/thermal-engine -c /etc/thermal-engine-8226.co
     user root
     group root
 
-service time_daemon /system/bin/time_daemon
-    class late_start
-    user root
-    group root
+# service time_daemon /system/bin/time_daemon
+#    class late_start
+#    user root
+#    group root
 
-service wcnss-service /system/bin/wcnss_service
-    class late_start
-    user root
-    group system wifi
-    oneshot
+# service wcnss-service /system/bin/wcnss_service
+#    class late_start
+#    user root
+#    group system wifi
+#    oneshot
 
 # WPA
 service p2p_supplicant /system/bin/wpa_supplicant \
