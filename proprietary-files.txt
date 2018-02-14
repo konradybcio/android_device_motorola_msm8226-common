@@ -101,8 +101,6 @@ vendor/lib/librpmb.so|930cada51c737dd8f95a94a8013a5caedd3de60e
 vendor/lib/libssd.so|1bfb2ccaa33455a9b9b2e0c4ae34e7586045b299
 
 # GPS
--app/com.qualcomm.location/com.qualcomm.location.apk
--app/com.qualcomm.services.location/com.qualcomm.services.location.apk
 bin/location-mq
 bin/xtwifi-client
 bin/xtwifi-inet-agent
@@ -194,7 +192,6 @@ vendor/lib/libqmiservices.so
 vendor/lib/libsmemlog.so
 
 # Radio
--app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 bin/netmgrd
 bin/qmuxd
 bin/radish
@@ -203,8 +200,6 @@ bin/rmt_storage
 bin/qmi_motext_hook
 etc/permissions/qcnvitems.xml
 etc/permissions/qcrilhook.xml
--framework/qcnvitems.jar
--framework/qcrilhook.jar
 lib/libadropbox.so
 lib/libmdmcutback.so
 lib/libmdmdetect.so
@@ -224,7 +219,6 @@ vendor/lib/libthermalclient.so
 vendor/lib/libthermalioctl.so
 
 # Time services
--app/TimeService/TimeService.apk
 bin/time_daemon
 vendor/lib/libtime_genoff.so
 vendor/lib/libTimeService.so
