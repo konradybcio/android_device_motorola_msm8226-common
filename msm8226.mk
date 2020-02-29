@@ -226,12 +226,9 @@ PRODUCT_COPY_FILES += \
 # Ubuntu
 PRODUCT_PACKAGES += \
     libaudioflingerglue \
-    libminisf \
-    minisfservice \
     libdroidmedia \
     libcamera_compat_layer \
     libui_compat_layer \
     libsf_compat_layer \
     libmedia_compat_layer \
     minimediaservice \
-    libminisf_32

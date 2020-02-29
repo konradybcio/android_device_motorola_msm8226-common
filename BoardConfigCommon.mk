@@ -127,11 +127,6 @@ ifeq ($(HOST_OS),linux)
   endif
 endif
 
-# SELinux
--include device/qcom/sepolicy/sepolicy.mk
-
-BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
-
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_HAS_QCOM_WLAN_SDK := true
