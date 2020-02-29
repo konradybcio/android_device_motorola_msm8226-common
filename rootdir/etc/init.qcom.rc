@@ -27,6 +27,7 @@
 
 import /init.qcom.usb.rc
 import /init.target.rc
+import /init_wlan_bt.rc
 
 on early-init
     # Create firmware mount point
